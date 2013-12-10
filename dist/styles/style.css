@@ -1,0 +1,993 @@
+/* =====================================================================================
+ *
+ * FRONT-O-MATIC
+ * A front-end development framework made by Kaleidos (http://kaleidos.net)
+ *
+ * =====================================================================================*/
+/* Core */
+/*! normalize.css v2.1.2 | MIT License | git.io/normalize */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined in IE 8/9.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+/**
+ * Correct `inline-block` display not defined in IE 8/9.
+ */
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+/**
+ * Address `[hidden]` styling not present in IE 8/9.
+ * Hide the `template` element in IE, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
+  display: none;
+}
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0;
+}
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background: transparent;
+}
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+a:focus {
+  outline: thin dotted;
+}
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0;
+}
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+/**
+ * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold;
+}
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+dfn {
+  font-style: italic;
+}
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000;
+}
+/**
+ * Correct font family set oddly in Safari 5 and Chrome.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+pre {
+  white-space: pre-wrap;
+}
+/**
+ * Set consistent quote types.
+ */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9.
+ */
+img {
+  border: 0;
+}
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari 5.
+ */
+figure {
+  margin: 0;
+}
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+/**
+ * 1. Correct `color` not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+/**
+ * 1. Correct font family not being inherited in all browsers.
+ * 2. Correct font size not being inherited in all browsers.
+ * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+button,
+input {
+  line-height: normal;
+}
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+button,
+select {
+  text-transform: none;
+}
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+/**
+ * 1. Address box sizing set to `content-box` in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+/**
+ * 1. Remove default vertical scrollbar in IE 8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Bootstrap */
+/* Responsive */
+/* ===============================================================
+ * 
+ * FRONT-O-MATIC
+ * A front-end development framework made by Kaleidos (http://kaleidos.net)
+ * 
+ * Media Queries - From css-tricks.com
+ * http://css-tricks.com/snippets/css/media-queries-for-standard-devices/
+ * 
+ * =============================================================*/
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  /* Styles */
+}
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width: 321px) {
+  /* Styles */
+}
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width: 320px) {
+  /* Styles */
+}
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* Styles */
+}
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  /* Styles */
+}
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  /* Styles */
+}
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 1224px) {
+  /* Styles */
+}
+/* Large screens ----------- */
+@media only screen and (min-width: 1824px) {
+  /* Styles */
+}
+/* iPhone 4 ----------- */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  /* Styles */
+}
+/* Typography */
+/* ===============================================================
+ *
+ * FRONT-O-MATIC
+ * A front-end development framework made by Kaleidos (http://kaleidos.net)
+ *
+ * Typography
+ *
+ * =============================================================*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-rendering: optimizelegibility;
+}
+/* ==================================================
+// Typography helpers
+   =================================================*/
+small {
+  font-size: 85%;
+}
+strong {
+  font-weight: bold;
+}
+em {
+  font-style: italic;
+}
+cite {
+  font-style: normal;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.text-center {
+  text-align: center;
+}
+/* ==================================================
+// Import fonts
+   =================================================*/
+/* Just click to select the code */
+@charset "UTF-8";
+/* Roboto */
+@font-face {
+  font-family: 'roboto_condensed';
+  src: url('fonts/RobotoCondensed-Regular-webfont.eot');
+  src: url('fonts/RobotoCondensed-Regular-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/RobotoCondensed-Regular-webfont.woff') format('woff'), url('fonts/RobotoCondensed-Regular-webfont.ttf') format('truetype'), url('fonts/RobotoCondensed-Regular-webfont.svg#roboto_condensedregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'roboto_condensedbold';
+  src: url('fonts/RobotoCondensed-Bold-webfont.eot');
+  src: url('fonts/RobotoCondensed-Bold-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/RobotoCondensed-Bold-webfont.woff') format('woff'), url('fonts/RobotoCondensed-Bold-webfont.ttf') format('truetype'), url('fonts/RobotoCondensed-Bold-webfont.svg#roboto_condensedbold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* NoteThis */
+@font-face {
+  font-family: 'note_this';
+  src: url('fonts/Note_this-webfont.eot');
+  src: url('fonts/Note_this-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/Note_this-webfont.woff') format('woff'), url('fonts/Note_this-webfont.ttf') format('truetype'), url('fonts/Note_this-webfont.svg#note_thisregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* PIWEEK13 */
+@font-face {
+  font-family: "piweek13";
+  src: url("fonts/piweek13.eot");
+  src: url("fonts/piweek13.eot?#iefix") format("embedded-opentype"), url("fonts/piweek13.ttf") format("truetype"), url("fonts/piweek13.svg#piweek13") format("svg"), url("fonts/piweek13.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+[data-icon]:before {
+  font-family: "piweek13" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "piweek13" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-bulb:before {
+  content: "a";
+}
+.icon-like:before {
+  content: "b";
+}
+.icon-lab:before {
+  content: "c";
+}
+.icon-star:before {
+  content: "d";
+}
+.icon-heart:before {
+  content: "e";
+}
+.icon-right-open-big:before {
+  content: "f";
+}
+.icon-left-open-big:before {
+  content: "g";
+}
+.icon-calendar:before {
+  content: "h";
+}
+.icon-user:before {
+  content: "i";
+}
+.icon-diamond:before {
+  content: "j";
+}
+.icon-paperplane:before {
+  content: "k";
+}
+.icon-note:before {
+  content: "l";
+}
+.icon-up-open:before {
+  content: "m";
+}
+.icon-down-open:before {
+  content: "n";
+}
+.icon-mail:before {
+  content: "o";
+}
+/* Colors */
+/* ===============================================================
+ *
+ * FRONT-O-MATIC
+ * A front-end development framework made by Kaleidos (http://kaleidos.net)
+ *
+ * Colors
+ *
+ * =============================================================*/
+/*Basic Colors*/
+/* Customize colors */
+/* Custom */
+/* Helpers */
+/* ===============================================================
+ *
+ * FRONT-O-MATIC
+ * A front-end development framework made by Kaleidos (http://kaleidos.net)
+ *
+ * Helpers
+ *
+ * =============================================================*/
+.hidden {
+  display: none;
+}
+.invisible {
+  visibility: hidden;
+}
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  *zoom: 1;
+}
+.clear {
+  clear: both;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.text-indent {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* =============================================
+ * STICKY FOOTER
+ * ============================================= */
+/*
+ * HELPER for sticky footer, uncomment to use.
+ * Add footer-heigh to your footer-height var
+ * Add class footer-push to your footer.
+ * http://css-tricks.com/snippets/css/sticky-footer/
+ 
+@footer-height: 200px; 
+
+.content {
+    min-height: 100%;
+    margin-bottom: -@footer-height; 
+    &:after {
+        content: "";
+        display: block;
+    }
+}
+.site-footer, .page-wrap:after {
+  height: @footer-height; 
+}
+
+*/
+/* ==============================================
+ * TEXT SHADOW
+ * ============================================== */
+/* ==============================================
+ * CSS3 ARROW BOX // http://cssarrowplease.com/
+ * ============================================== */
+/* Example > .top_arrow_box(#FFFFFF; 10%, 20px, #cccc; 1px)*/
+/* ========================================================================
+ * GENERIC LIGHTBOX
+ * ========================================================================= */
+.overlay {
+  z-index: 499;
+  background: rgba(255, 255, 255, 0.6);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.lightbox {
+  background: #ffffff;
+  -webkit-box-shadow: 0px 4px 10px 0px rgba(0,0,0,.5);
+  -moz-box-shadow: 0px 4px 10px 0px rgba(0,0,0,.5);
+  box-shadow: 0px 4px 10px 0px rgba(0,0,0,.5);
+  border: 1px solid #cbd6dc;
+  padding: 12px;
+  z-index: 999;
+  position: fixed;
+  left: 50%;
+}
+.lightbox .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #000000;
+}
+/* Body */
+body {
+  background: #313131;
+  font-family: 'roboto_condensed';
+}
+/* Rock Boat */
+.page-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+.rock-boat {
+  width: 3465px;
+  height: 2745px;
+  position: relative;
+  display: block;
+}
+.page-section {
+  width: 960px;
+  height: 700px;
+  position: absolute;
+  display: block;
+}
+.page-section.home-section {
+  bottom: 0;
+  left: 1195px;
+}
+.page-section.concept-section {
+  left: 2505px;
+  bottom: 700px;
+}
+.page-section.benefits-section {
+  top: 0;
+  left: 1125px;
+}
+.page-section.process-section {
+  top: 800px;
+  left: 1125px;
+}
+.page-section.rules-section {
+  top: -145px;
+  left: 2625px;
+}
+.page-section.join-section {
+  left: -250px;
+  bottom: 700px;
+}
+/* Main navigation */
+.top-navigation {
+  position: absolute;
+  top: 0;
+  right: 40px;
+  z-index: 99;
+}
+.top-navigation ul {
+  margin: 0;
+  padding: 0;
+}
+.top-navigation ul li {
+  display: inline-block;
+}
+.top-navigation ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  padding: 15px 10px;
+  font-size: 32px;
+  display: inline-block;
+  border-top: 6px solid #313131;
+}
+.top-navigation ul li a:after {
+  font-family: "piweek13";
+}
+.top-navigation ul li a:hover {
+  border-top: 6px solid #FFF;
+  transition: all .3s;
+}
+.top-navigation ul li a.home.active,
+.top-navigation ul li a.home:hover {
+  color: #a7d050;
+  border-color: #a7d050;
+}
+.top-navigation ul li a.concept.active,
+.top-navigation ul li a.concept:hover {
+  color: #fff8e7;
+  border-color: #fff8e7;
+}
+.top-navigation ul li a.benefits.active,
+.top-navigation ul li a.benefits:hover {
+  color: #ca4b38;
+  border-color: #ca4b38;
+}
+.top-navigation ul li a.process.active,
+.top-navigation ul li a.process:hover {
+  color: #cc0000;
+  border-color: #cc0000;
+}
+.top-navigation ul li a.rules.active,
+.top-navigation ul li a.rules:hover {
+  color: #fc8eac;
+  border-color: #fc8eac;
+}
+.top-navigation ul li a.join.active,
+.top-navigation ul li a.join:hover {
+  color: #ffcc00;
+  border-color: #ffcc00;
+}
+/* Home */
+.home-section h1 {
+  display: none;
+}
+.home-section .main-logo {
+  position: absolute;
+  top: 20%;
+  left: 27%;
+}
+.home-section .subtitle {
+  position: absolute;
+  top: 40%;
+  text-align: center;
+  width: 500px;
+  margin-left: -250px;
+  left: 50%;
+  color: #f2f2f2;
+  -webkit-transform: rotate(7deg);
+  -moz-transform: rotate(7deg);
+  -o-transform: rotate(7deg);
+  -ms-transform: rotate(7deg);
+  transform: rotate(7deg);
+  font-size: 24px;
+}
+.home-section .team-ideas {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-family: 'note_this';
+  font-size: 35px;
+  color: #f2f2f2;
+  -webkit-opacity: 0.2;
+  -moz-opacity: 0.2;
+  opacity: 0.2;
+  width: 450px;
+  -webkit-transform: rotate(2deg);
+  -moz-transform: rotate(2deg);
+  -o-transform: rotate(2deg);
+  -ms-transform: rotate(2deg);
+  transform: rotate(2deg);
+}
+.home-section .kaleidos-logo {
+  position: absolute;
+  bottom: -200px;
+  right: -200px;
+}
+.concept-section h1 {
+  display: none;
+}
+.concept-section .concept-text {
+  position: absolute;
+  top: 10%;
+  right: 2%;
+  width: 400px;
+  color: #f2f2f2;
+  font-size: 24px;
+}
+.concept-section .image-concept {
+  position: absolute;
+  top: 10%;
+  left: 2%;
+}
+.concept-section .image-pencil {
+  position: absolute;
+  bottom: -101px;
+  left: -126px;
+}
+.benefits-section ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 560px;
+  position: absolute;
+  top: 2%;
+  text-align: center;
+  margin-left: -275px;
+  left: 50%;
+  -webkit-transform: rotate(5.5deg);
+  -moz-transform: rotate(5.5deg);
+  -o-transform: rotate(5.5deg);
+  -ms-transform: rotate(5.5deg);
+  transform: rotate(5.5deg);
+}
+.benefits-section ul li {
+  font-size: 26px;
+  color: #ffffff;
+  padding: 10px 0;
+}
+.benefits-section ul li h1 {
+  padding: 0;
+  margin: 0;
+}
+.process-section .timeline {
+  margin: 30px 0 0 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+}
+.process-section .timeline:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 10px;
+  background: #cc0000;
+  left: 21px;
+  margin-left: -10px;
+  -webkit-border-radius: 10px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 10px;
+  -moz-background-clip: padding;
+  border-radius: 10px;
+  background-clip: padding-box;
+}
+.process-section .timeline > li {
+  position: relative;
+  margin-bottom: 40px;
+}
+.process-section .timeline > li .dot {
+  width: 32px;
+  height: 32px;
+  -webkit-border-radius: 50%;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 50%;
+  -moz-background-clip: padding;
+  border-radius: 50%;
+  background-clip: padding-box;
+  background: #333;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.process-section .timeline > li .event {
+  padding-left: 5%;
+  color: rgba(99, 99, 99, 0.3);
+}
+.process-section .timeline > li .event p {
+  margin: 5px;
+}
+.process-section .timeline > li .event p:before {
+  margin-right: 5px;
+}
+.process-section .timeline > li h2 {
+  color: rgba(255, 255, 255, 0.3);
+  margin: 0;
+}
+.process-section .timeline > li.current {
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+}
+.process-section .timeline > li.current .dot {
+  background: #cc0000;
+}
+.process-section .timeline > li.current .event {
+  color: #ffffff;
+}
+.process-section .timeline > li.current h2 {
+  color: #ffffff;
+}
+.process-section .timeline-data {
+  position: absolute;
+  top: 10%;
+  right: 2%;
+}
+.process-section .timeline-data .participants,
+.process-section .timeline-data .companys {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: #f2f2f2;
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+.process-section .timeline-data .participants .title,
+.process-section .timeline-data .companys .title {
+  color: #ffffff;
+  font-size: 21px;
+  font-weight: bold;
+}
+.rules-section .rule {
+  text-transform: uppercase;
+  font-size: 40px;
+  color: #ffffff;
+  width: 280px;
+  position: absolute;
+  top: 15%;
+  padding: 0 25px;
+  text-align: center;
+}
+.rules-section .rule1 {
+  margin-left: -140px;
+  left: 50%;
+  border-right: 1px dotted #ffffff;
+}
+.rules-section .rule2 {
+  margin-left: 140px;
+  left: 50%;
+}
+.join-section h1 {
+  font-size: 72px;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20%;
+  margin-bottom: 0;
+}
+.join-section p {
+  font-size: 40px;
+  text-align: center;
+  margin: 0;
+  color: #ffffff;
+}
+.join-section p span {
+  display: block;
+  color: #ffcc00;
+}
+.join-section p span:before {
+  color: #ffffff;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  margin-right: 10px;
+  display: inline-block;
+}

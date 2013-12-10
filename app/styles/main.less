@@ -1,0 +1,348 @@
+/* =====================================================================================
+ *
+ * FRONT-O-MATIC
+ * A front-end development framework made by Kaleidos (http://kaleidos.net)
+ *
+ * =====================================================================================*/
+
+/* Core */
+@import "libs/reset.less"; /* Bootstrap */
+
+/* Responsive */
+@import "libs/responsive.less";
+
+/* Typography */
+@import "libs/typography.less";
+
+/* Colors */
+@import "libs/colors.less";
+
+/* Helpers */
+@import "libs/helpers.less";
+
+/* Body */
+
+body {
+    background: @background;
+    font-family: 'roboto_condensed';
+}
+
+/* Rock Boat */
+
+.page-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.rock-boat{
+    width: 3465px;
+    height: 2745px;
+    position: relative;
+    display: block;
+}
+
+.page-section {
+    width: 960px;
+    height: 700px;
+    position: absolute;
+    display: block;
+    &.home-section {
+        bottom: 0;
+        left: 1195px;
+    }
+    &.concept-section {
+        left: 2505px;
+        bottom: 700px;
+    }
+    &.benefits-section {
+        top: 0;
+        left: 1125px;
+    }
+    &.process-section {
+        top: 800px;
+        left: 1125px;
+    }
+    &.rules-section {
+        top: -145px;
+        left: 2625px;
+    }
+    &.join-section {
+        left: -250px;
+        bottom: 700px;
+    }
+}
+
+
+/* Main navigation */
+
+.top-navigation {
+    position: absolute;
+    top: 0;
+    right: 40px;
+    z-index: 99;
+    ul {
+        margin: 0;
+        padding: 0;
+        li {
+            display: inline-block;
+            a{
+                text-decoration: none;
+                color: @white;
+                padding: 15px 10px;
+                font-size: 32px;
+                display: inline-block;
+                border-top: 6px solid @background;
+                &:after {
+                    font-family: "piweek13";
+                }
+                &:hover {
+                    border-top: 6px solid #FFF;
+                    transition: all .3s;
+                }
+                &.home.active, &.home:hover {
+                    color: @home;
+                    border-color: @home;
+                }
+                &.concept.active, &.concept:hover {
+                    color: @concept;
+                    border-color: @concept;
+                }
+                &.benefits.active, &.benefits:hover {
+                    color: @benefits;
+                    border-color: @benefits;
+                }
+                &.process.active, &.process:hover {
+                    color: @process;
+                    border-color: @process;
+                }
+                &.rules.active, &.rules:hover {
+                    color: @rules;
+                    border-color: @rules;
+                }
+                &.join.active, &.join:hover {
+                    color: @join;
+                    border-color: @join;
+                }
+            }
+        }
+    }
+}
+
+/* Home */
+
+.home-section {
+    h1{
+        display: none;
+    }
+    .main-logo {
+        position: absolute;
+        top: 20%;
+        left: 27%;
+    }
+    .subtitle{
+        position: absolute;
+        top: 40%;
+        text-align: center;
+        width: 500px;
+        margin-left:-250px;
+        left:50%;
+        color: @gray;
+        .rotate(7deg);
+        font-size: 24px;
+    }
+    .team-ideas {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        font-family: 'note_this';
+        font-size: 35px;
+        color: @gray;
+        .opacity(.2);
+        width: 450px;
+        .rotate(2deg);
+    }
+    .kaleidos-logo {
+        position: absolute;
+        bottom: -200px;
+        right: -200px;
+    }
+}
+
+.concept-section{
+    h1{
+        display: none;
+    }
+    .concept-text {
+        position: absolute;
+        top: 10%;
+        right: 2%;
+        width: 400px;
+        color: @gray;
+        font-size: 24px;
+    }
+    .image-concept {
+        position: absolute;
+        top: 10%;
+        left: 2%;
+    }
+    .image-pencil {
+        position: absolute;
+        bottom: -101px;
+        left: -126px;
+    }
+}
+
+.benefits-section {
+    ul {
+        margin:0;
+        padding: 0;
+        list-style: none;
+        width: 560px;
+        position: absolute;
+        top: 2%;
+        text-align: center;
+        margin-left:-275px;
+        left:50%;
+        .rotate(5.5deg);
+        li {
+            font-size: 26px;
+            color: @white;
+            padding: 10px 0;
+            h1{
+                padding: 0;
+                margin: 0;
+            }
+        }
+    }
+}
+
+.process-section {
+    .timeline {
+        margin: 30px 0 0 0;
+        padding: 0;
+        list-style: none;
+        position: relative;
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 10px;
+            background: #cc0000;
+            left: 21px;
+            margin-left: -10px;
+            .border-radius(10px);
+        }
+        >li {
+            position: relative;
+            margin-bottom: 40px;
+            .dot {
+                width: 32px;
+                height: 32px;
+                .border-radius(50%);
+                background: #333;
+                display: block;
+                position: absolute;
+                top:0;
+                left: 0;
+            }
+            .event {
+                padding-left: 5%;
+                color: rgba(99,99,99,.3);
+                p{
+                    margin: 5px;
+                    &:before {
+                        margin-right: 5px;
+                    }
+                }
+            }
+            h2 {
+                color: rgba(255,255,255, .3);
+                margin: 0;
+
+            }
+            &.current {
+                .opacity(1);
+                .dot {
+                    background: #cc0000;
+                }
+                .event {
+                    color: rgba(255,255,255, 1);
+                }
+                h2 {
+                    color: rgba(255,255,255, 1);
+                }
+            }
+        }
+    }
+    .timeline-data {
+        position: absolute;
+        top: 10%;
+        right: 2%;
+        .participants, .companys {
+            margin:0;
+            padding: 0;
+            list-style: none;
+            color: @gray;
+            font-size: 18px;
+            margin-bottom: 40px;
+            .title{
+                color: @white;
+                font-size: 21px;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.rules-section {
+    .rule {
+        text-transform: uppercase;
+        font-size: 40px;
+        color: @white;
+        width: 280px;
+        position: absolute;
+        top: 15%;
+        padding: 0 25px;
+        text-align: center;
+    }
+    .rule1 {
+        margin-left:-140px;
+        left:50%;
+        border-right: 1px dotted @white;
+    }
+    .rule2 {
+        margin-left:140px;
+        left:50%;
+    }
+}
+
+.join-section {
+    h1 {
+        font-size: 72px;
+        color: @white;
+        text-transform: uppercase;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 20%;
+        margin-bottom: 0;
+    }
+    p {
+        font-size: 40px;
+        text-align: center;
+        margin: 0;
+        color: @white;
+        span {
+            display: block;
+            color: @join;
+            &:before {
+                color: @white;
+                .rotate(-45deg);
+                margin-right: 10px;
+                display: inline-block;
+            }
+        }
+    }
+}
