@@ -675,7 +675,7 @@ body {
 }
 .page-section {
   width: 960px;
-  height: 700px;
+  height: 570px;
   position: absolute;
   display: block;
 }
@@ -846,9 +846,9 @@ body {
   transform: rotate(5.5deg);
 }
 .benefits-section ul li {
-  font-size: 26px;
+  font-size: 24px;
   color: #ffffff;
-  padding: 10px 0;
+  padding: 4px 0;
 }
 .benefits-section ul li h1 {
   padding: 0;
@@ -947,19 +947,18 @@ body {
   text-transform: uppercase;
   font-size: 40px;
   color: #ffffff;
-  width: 280px;
+  width: 320px;
   position: absolute;
-  top: 15%;
   padding: 0 25px;
   text-align: center;
 }
 .rules-section .rule1 {
-  margin-left: -140px;
+  margin-left: -250px;
   left: 50%;
   border-right: 1px dotted #ffffff;
 }
 .rules-section .rule2 {
-  margin-left: 140px;
+  margin-left: 60px;
   left: 50%;
 }
 .join-section h1 {

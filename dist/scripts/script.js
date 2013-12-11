@@ -120,8 +120,8 @@
         this.BWidth = $(window).width();
         this.loadVisor();
         return this.boat.animate({
-          marginTop: '-1995px',
-          marginLeft: '-722px'
+          marginTop: '-2160px',
+          marginLeft: '-1030px'
         }, 500);
       };
 
@@ -139,8 +139,8 @@
         this.target = $(event.currentTarget);
         this.setActive(this.target);
         return this.boat.animate({
-          marginTop: '-1995px',
-          marginLeft: '-722px'
+          marginTop: '-2160px',
+          marginLeft: '-1030px'
         }, 500);
       };
 
@@ -149,8 +149,8 @@
         this.target = $(event.currentTarget);
         this.setActive(this.target);
         return this.boat.animate({
-          marginTop: '-1295px',
-          marginLeft: '-2032.5px'
+          marginTop: '-1440px',
+          marginLeft: '-2286px'
         }, 500);
       };
 
@@ -159,8 +159,8 @@
         this.target = $(event.currentTarget);
         this.setActive(this.target);
         return this.boat.animate({
-          marginTop: '115px',
-          marginLeft: '-752.5px'
+          marginTop: '100px',
+          marginLeft: '-970px'
         }, 500);
       };
 
@@ -170,7 +170,7 @@
         this.setActive(this.target);
         return this.boat.animate({
           marginTop: '-750px',
-          marginLeft: '-652.5px'
+          marginLeft: '-940.5px'
         }, 500);
       };
 
@@ -179,8 +179,8 @@
         this.target = $(event.currentTarget);
         this.setActive(this.target);
         return this.boat.animate({
-          marginTop: '245px',
-          marginLeft: '-2400.5px'
+          marginTop: '230px',
+          marginLeft: '-2510.5px'
         }, 500);
       };
 
@@ -189,7 +189,7 @@
         this.target = $(event.currentTarget);
         this.setActive(this.target);
         return this.boat.animate({
-          marginTop: '-1255.5px',
+          marginTop: '-1500px',
           marginLeft: '468.5px'
         }, 500);
       };
